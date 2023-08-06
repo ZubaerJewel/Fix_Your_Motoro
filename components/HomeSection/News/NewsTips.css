@@ -1,0 +1,82 @@
+.vehicle-tips-news-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .vehicle-tips-news-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .vehicle-tips-news-section .tips-carousel {
+    flex: 1;
+    padding: 0 10px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .vehicle-tips-news-section h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .vehicle-tips-news-section .tips-content {
+    display: flex;
+    animation: slideTips 10s infinite; /* Adjust slide duration as needed */
+  }
+  
+  .vehicle-tips-news-section .tips-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .vehicle-tips-news-section .tips-list li {
+    margin-right: 30px;
+  }
+  
+  .vehicle-tips-news-section li a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .vehicle-tips-news-section li a:hover {
+    text-decoration: underline;
+  }
+  
+  @keyframes slideTips {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-100%);
+    }
+    45% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(-200%);
+    }
+    70% {
+      transform: translateX(-200%);
+    }
+    75% {
+      transform: translateX(-300%);
+    }
+    95% {
+      transform: translateX(-300%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
