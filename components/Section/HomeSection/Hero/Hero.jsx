@@ -7,13 +7,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import  '@/styles/hero.modules.css'
+import "@/styles/hero.modules.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import imageData from "@/utils/imageData";
-import Image from "next/image";
 
-export default function Hero() {
+export const Hero = () => {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -21,7 +20,7 @@ export default function Hero() {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
   return (
-    <>
+    <div className="hero">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -37,23 +36,23 @@ export default function Hero() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
         className="mySwiper"
       >
-        {
-          imageData.map(image =><SwiperSlide key={image.id}>
-             <div
-            style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),url('${image.image}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              width: "100%",
-              height: "100%",
-            }}
-            className="flex items-center h-full justify-center w-full"
-          >
-            <p className="text-white font-bold text-5xl">{image.title}</p>
-          </div>
-          </SwiperSlide> )
-        }
-        
+        {imageData.map((image) => (
+          <SwiperSlide key={image.id}>
+            <div
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),url('${image.image}')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                width: "100%",
+                height: "100%",
+              }}
+              className="flex items-center h-full justify-center w-full"
+            >
+              <p className="text-white font-bold text-5xl">{image.title}</p>
+            </div>
+          </SwiperSlide>
+        ))}
+
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
             <circle cx="24" cy="24" r="20"></circle>
@@ -61,6 +60,6 @@ export default function Hero() {
           <span ref={progressContent}></span>
         </div>
       </Swiper>
-    </>
+    </div>
   );
-}
+};

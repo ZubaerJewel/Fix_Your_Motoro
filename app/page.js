@@ -1,16 +1,18 @@
-import Hero from "@/components/Hero/Hero";
-import NewsTips from "@/components/HomeSection/News/NewsTips";
-import Review from "@/components/HomeSection/Review/Review";
-import Services from "@/components/HomeSection/Services/Services";
+import { Hero } from "@/components/Section/HomeSection/Hero/Hero";
+import NewsTips from "@/components/Section/HomeSection/News/NewsTips";
+import Review from "@/components/Section/HomeSection/Review/Review";
+import Services from "@/components/Section/HomeSection/Services/Services";
+import OurExpert from "@/components/Section/HomeSection/OurExpert/OurExpert";
+
 
 const HomePage = () => {
   return (
     <main>
-      <Hero/>
-      <Services/>
-      <NewsTips/>
-      <Review/>
-      
+      <Hero />
+      <OurExpert/>
+      <NewsTips />
+      <Services />
+      <Review />
     </main>
   );
 };
