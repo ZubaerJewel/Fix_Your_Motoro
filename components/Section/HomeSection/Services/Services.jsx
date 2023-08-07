@@ -10,6 +10,10 @@ const Services = () => {
             <li className="text-xl">Tires Serviced</li>
             <li className="text-xl">Exchange Air Filter</li>
             <li className="text-xl">Replace Ancient Coolant</li>
+            <li className="text-xl">Oil Changed</li>
+            <li className="text-xl">Tires Serviced</li>
+            <li className="text-xl">Exchange Air Filter</li>
+            <li className="text-xl">Replace Ancient Coolant</li>
           </ul>
         </div>
       </div>
