@@ -12,7 +12,8 @@ const NewsTips = () => {
               <li>How to Improve Fuel Efficiency</li>
               <li>Top 10 Maintenance Checks for Your Car</li>
               <li>Winter Driving Safety Tips</li>
-            </ul>
+              <li>for our client must be satisfy with our product and services from our engineer and seller.
+           </li> </ul>
           </div>
         </div>
         <div className="news">
